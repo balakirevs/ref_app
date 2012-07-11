@@ -1,0 +1,28 @@
+fr:
+  refinery:
+    plugins:
+      indices:
+        title: Indices
+    indices:
+      admin:
+        indices:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Index
+            reorder: Réordonner les Indices
+            reorder_done: Fin de réordonnancement des Indices
+          records:
+            title: Indices
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Index. Cliquer sur "Créer un(e) nouve(au/l/lle) Index" pour créer votre premi(er/ère) index.'
+          index:
+            view_live_html: Voir ce(t/tte) index <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) index
+            delete: Supprimer définitivement ce(t/tte) index
+      indices:
+        show:
+          other: Autres Indices
+  activerecord:
+    attributes:
+      'refinery/indices/index':
+        title: Title
+        description: Description

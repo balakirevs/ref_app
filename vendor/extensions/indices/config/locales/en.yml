@@ -1,0 +1,28 @@
+en:
+  refinery:
+    plugins:
+      indices:
+        title: Indices
+    indices:
+      admin:
+        indices:
+          actions:
+            create_new: Add New Index
+            reorder: Reorder Indices
+            reorder_done: Done Reordering Indices
+          records:
+            title: Indices
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Indices yet. Click "Add New Index" to add your first index.
+          index:
+            view_live_html: View this index live <br/><em>(opens in a new window)</em>
+            edit: Edit this index
+            delete: Remove this index forever
+      indices:
+        show:
+          other: Other Indices
+  activerecord:
+    attributes:
+      'refinery/indices/index':
+        title: Title
+        description: Description

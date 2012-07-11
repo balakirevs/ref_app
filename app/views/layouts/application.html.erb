@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+  <body>
+    <div class="wrapper">
+      <%= site_bar -%>
+      <%#= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <div>
+      <%= render(:partial => "/refinery/menu", :locals => {
+             :dom_id => 'menu',
+             :css => 'menu'
+           }) %>
+        <%= yield %>
+    </div>
+    <%= render '/refinery/javascripts' %>
+    <div id="push"></div>
+  </div>
+  <div id="footer">Подвал</div>  
+</body>
+</html>
+

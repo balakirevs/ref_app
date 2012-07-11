@@ -1,0 +1,13 @@
+<% content_for :body do %>
+ <div id="content">
+   <ul id="news">
+    <% @news_items.each do |news_item| %>
+      <li>
+        <%= link_to news_item.name, refinery.news_items_news_item_path(news_item) %>
+      <%= link_to image_tag(news_item.photo.thumbnail("70x70#c").url), news_item.photo.thumbnail("30x30").url %>
+      </li>
+      <% end %>
+   </ul>
+<% end %>
+</div>
+<%= render '/refinery/content_page' %>

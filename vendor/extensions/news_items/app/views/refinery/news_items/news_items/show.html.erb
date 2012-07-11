@@ -1,0 +1,27 @@
+<% content_for :body do %> 
+  <h1>
+      <%=raw @news_item.name %>
+  </h1>
+    <p>
+      <%=raw @news_item.news_date %>
+    </p>
+  <hr size=1> 
+  <div class="imgcont">
+    <% @news_items.each do |news_item| %>
+      <%= link_to image_tag(news_item.photo.thumbnail("180x130#c").url), news_item.photo.thumbnail("70x70").url %> 
+    <% end %>
+  </div> 
+    <p>
+      <%=raw @news_item.description %>
+    </p> 
+<% end %>
+<% content_for :side_body do %>
+    <h2><%= 'Другие новости' %></h2>
+    <ul>
+      <% @news_items.each do |news_item| %>
+        <li>
+          <%= link_to news_item.name, refinery.news_items_news_item_path(news_item) %>
+        </li>
+      <% end %>
+<% end %> 
+<%= render '/refinery/content_page' %>

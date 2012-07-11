@@ -1,0 +1,29 @@
+es:
+  refinery:
+    plugins:
+      indices:
+        title: Indices
+#        article: masculino/femenino
+    indices:
+      admin:
+        indices:
+          actions:
+            create_new: Crear nuevo index
+            reorder: Reordenar indices
+            reorder_done: Reordenación de indices completada
+          records:
+            title: Indices
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay indices todavía. Pulsa en "Crear nuevo Index" para crear tu primer index.
+          index:
+            view_live_html: Ver este index como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este index
+            delete: Borrar este index para siempre
+      indices:
+        show:
+          other: Otros indices
+  activerecord:
+    attributes:
+      'refinery/indices/index':
+        title: Title
+        description: Description

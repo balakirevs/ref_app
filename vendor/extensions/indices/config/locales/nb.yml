@@ -1,0 +1,28 @@
+nb:
+  refinery:
+    plugins:
+      indices:
+        title: Indices
+    indices:
+      admin:
+        indices:
+          actions:
+            create_new: Lag en ny Index
+            reorder: Endre rekkefølgen på Indices
+            reorder_done: Ferdig å endre rekkefølgen Indices
+          records:
+            title: Indices
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Indices enda. Klikk på "Lag en ny Index" for å legge til din første index.
+          index:
+            view_live_html: Vis hvordan denne index ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne index
+            delete: Fjern denne index permanent
+      indices:
+        show:
+          other: Andre Indices
+  activerecord:
+    attributes:
+      'refinery/indices/index':
+        title: Title
+        description: Description

@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="indices">
+    <% @indices.each do |index| %>
+      <li>
+        <%= link_to index.title, refinery.indices_index_path(index) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>
