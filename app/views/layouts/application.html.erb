@@ -3,6 +3,8 @@
 <%= render '/refinery/html_tag' %>
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <%= render '/refinery/head' %>
+  
+    <%= render '/refinery/javascripts' %>
   <body>
     <div class="wrapper">
       <%= site_bar -%>
@@ -14,7 +16,6 @@
            }) %>
         <%= yield %>
     </div>
-    <%= render '/refinery/javascripts' %>
     <div id="push"></div>
   </div>
   <div id="footer">Подвал</div>  
