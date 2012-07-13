@@ -1,26 +1,26 @@
 <div>
-  <% @indices.each do |index| %>
     <br class="clear">
-      <div id="content">
-        <div class="fleft">
-          <h1><%= index.title %></h1>
-          <p><%= index.description %></p>
-        </div>  
-   <% end %>
-      
+    <div id="content">
 
-  <div class="fright">
-    <h2>Свежие новости</h2>
-      <ul id="news" class="nobull">
-        <% @news_items.each do |news_item| %>
-          <li>
-            <%= link_to image_tag(news_item.photo.thumbnail("70x70#c").url), news_item.photo.thumbnail("40x40").url %>
-              <%= link_to news_item.name, refinery.news_items_news_item_path(news_item) %>
-          </li>
+      <div class="fleft">
+        <% @indices.each do |index| %>
+          <h2><%= index.title %></h2>
+          <p><%= index.description %></p> 
         <% end %>
-      </ul>
       </div>
-    <br class="clear">
-  </div>  
+
+      <div class="fright">
+        <h2>Свежие новости</h2>
+          <ul id="news" class="nobull">
+            <% @news_items.each do |news_item| %>
+              <li>
+                <%= link_to image_tag(news_item.photo.thumbnail("70x70#c").url), news_item.photo.thumbnail("40x40").url %>
+                <%= link_to news_item.name, refinery.news_items_news_item_path(news_item) %>
+              </li>
+            <% end %>
+          </ul>
+      </div>
+      <br class="clear">
+    </div>  
 </div>     
 

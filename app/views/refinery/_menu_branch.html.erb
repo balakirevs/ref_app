@@ -3,12 +3,12 @@
     css = "class='#{classes.join(' ')}'".html_safe
   end
 -%>
-<li<%= ['', css].compact.join(' ').gsub(/\ *$/, '').html_safe %>>
-<%= link_to_unless_current(menu_branch.title, refinery.url_for(menu_branch.url)) {|link|
-content_tag 'span', link } -%>
+<li <%= ['', css].compact.join(' ').gsub(/\ *$/, '').html_safe %>>
+  <%= link_to_unless_current(menu_branch.title, refinery.url_for(menu_branch.url)) {|link|
+    content_tag 'span', link } -%>
   <% if ( (children = menu_branch.children unless hide_children).present? &&
           (!local_assigns[:menu_levels] || menu_branch.ancestors.length < local_assigns[:menu_levels]) ) -%>
-    <ul class='clearfix'>
+    <ul>
       <%= render :partial => '/refinery/menu_branch', :collection => children,
                  :locals => {
                    :apply_css => local_assigns[:apply_css],
