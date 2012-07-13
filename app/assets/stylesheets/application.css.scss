@@ -2,12 +2,19 @@
 * { margin: 0; }
 html, body { height: 100%; }
 
-.wrapper {
-  min-height: 100%; 
-  height: auto !important; 
+.wrapper {  
   height: 100%; 
-   
-  width:1010px;
+  width:100%;
+  
+}
+
+.clearfix, section {
+  margin-left: 10px;
+  margin-right: 10px;  
+}
+
+#body_content_title{
+  margin-left: 10px;
 }
 
 
@@ -20,7 +27,6 @@ body{
 
 #nav{
   padding:0;
-  margin: 10px 0;
   list-style:none;
   text-align:center;
 }
@@ -87,8 +93,8 @@ body{
 }
 
 .img1-url{
-  background: url("logo.png");
-  position: absolute;
+  width: 279px;
+  height: 92px;
 }
 
 .menu{
@@ -127,6 +133,10 @@ body{
   li{
     padding-left:10px;
   }
+}
+
+.logo1{
+  margin:10px 0 20px 0;
 }
 
 
